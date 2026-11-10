@@ -1,45 +1,244 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Your Name Golf</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Golf, lifestyle and the journey of Charley Hull.">
+  <title>Charley Hull | Golf & Lifestyle</title>
+
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html { scroll-behavior: smooth; }
+
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
-      background: #0b2b1a;
+      background: #071810;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 22px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #071810;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #244331;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #d9bc70;
+    }
+
+    nav a {
       color: white;
-      padding: 40px;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 13px;
+    }
+
+    nav a:hover { color: #d9bc70; }
+
+    .hero {
+      min-height: 570px;
+      display: flex;
+      align-items: center;
+      padding: 70px 8%;
+      background:
+        linear-gradient(90deg, #071810 5%, rgba(7,24,16,.8) 55%, rgba(7,24,16,.25)),
+        linear-gradient(0deg, #071810, transparent 45%);
+    }
+
+    .hero-content { max-width: 650px; }
+
+    .eyebrow {
+      color: #d9bc70;
+      letter-spacing: 4px;
+      font-size: 12px;
+      margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 45px;
+      font-size: clamp(48px, 9vw, 88px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: #d0d8d1;
+      max-width: 500px;
+      margin-bottom: 28px;
     }
 
     .button {
       display: inline-block;
-      background: gold;
-      color: black;
-      padding: 15px 25px;
-      margin: 10px;
+      background: #d9bc70;
+      color: #071810;
+      padding: 13px 25px;
       text-decoration: none;
-      border-radius: 8px;
+      font-weight: bold;
+      margin: 5px 8px 5px 0;
+      border-radius: 3px;
+    }
+
+    .button.outline {
+      background: transparent;
+      border: 1px solid #d9bc70;
+      color: #d9bc70;
+    }
+
+    section { padding: 75px 8%; }
+
+    .section-title {
+      color: #d9bc70;
+      font-size: 13px;
+      letter-spacing: 4px;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 18px;
+    }
+
+    .about p, .intro {
+      color: #bdc9c0;
+      max-width: 700px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #102b1c;
+      border: 1px solid #294632;
+      padding: 28px;
+      border-radius: 5px;
+    }
+
+    .card h3 { color: #d9bc70; margin-bottom: 12px; }
+    .card p { color: #bdc9c0; font-size: 14px; }
+
+    .shop { background: #0c2116; }
+
+    .shop-note {
+      color: #bdc9c0;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      padding: 35px 8%;
+      text-align: center;
+      border-top: 1px solid #294632;
+      color: #aebbb2;
+      font-size: 13px;
+    }
+
+    @media(max-width: 700px) {
+      header { flex-direction: column; gap: 15px; }
+      nav a { margin: 0 7px; font-size: 11px; }
+      .cards { grid-template-columns: 1fr; }
+      .hero { min-height: 480px; padding: 55px 7%; }
+      section { padding: 55px 7%; }
     }
   </style>
 </head>
 
 <body>
-  <h1>Your Name Golf</h1>
 
-  <h2>Professional Golfer | Champion Mindset</h2>
+<header>
+  <div class="logo">CHARLEY HULL</div>
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#career">CAREER</a>
+    <a href="#shop">SHOP</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+</header>
 
-  <p>
-    Welcome to my official website. Follow my golf journey,
-    shop my collection, and join my fan community.
-  </p>
+<main>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="eyebrow">GOLF • SPORT • LIFESTYLE</div>
+      <h1>THE GAME.<br>THE PASSION.<br>THE JOURNEY.</h1>
+      <p>
+        Discover the world of professional golf, sporting ambition
+        and lifestyle beyond the course.
+      </p>
+      <a href="#about" class="button">EXPLORE MORE</a>
+      <a href="#career" class="button outline">GOLF JOURNEY</a>
+    </div>
+  </section>
 
-  <a class="button" href="#">Shop</a>
-  <a class="button" href="#">Fan Club</a>
-  <a class="button" href="#">Golf Academy</a>
+  <section class="about" id="about">
+    <div class="section-title">GET TO KNOW ME</div>
+    <h2>Beyond The Golf Course</h2>
+    <p>
+      Explore the journey, dedication and passion behind
+      professional golf. Discover the people, experiences
+      and moments that make the game special.
+    </p>
+  </section>
+
+  <section id="career">
+    <div class="section-title">THE JOURNEY</div>
+    <h2>Golf & Career</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Achievements</h3>
+        <p>Discover career milestones, victories and memorable moments.</p>
+      </div>
+      <div class="card">
+        <h3>Tournaments</h3>
+        <p>Follow tournament appearances, results and golf updates.</p>
+      </div>
+      <div class="card">
+        <h3>Gallery</h3>
+        <p>Explore approved photographs and moments from the course.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="shop" id="shop">
+    <div class="section-title">GOLF LIFESTYLE</div>
+    <h2>The Collection</h2>
+    <p class="shop-note">
+      Discover golf-inspired clothing, accessories and lifestyle products.
+    </p>
+    <a href="#contact" class="button">SHOP COMING SOON</a>
+  </section>
+
+  <section id="contact">
+    <div class="section-title">CONNECT</div>
+    <h2>Stay Connected</h2>
+    <p class="intro">
+      For business enquiries, sponsorship opportunities
+      and partnerships, please get in touch.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>Golf • Sport • Lifestyle</p>
+  <p>© 2026 Charley Hull Website Concept</p>
+</footer>
 
 </body>
 </html>
